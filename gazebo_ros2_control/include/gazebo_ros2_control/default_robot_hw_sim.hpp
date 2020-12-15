@@ -45,11 +45,6 @@
 #include <hardware_interface/robot_hw.hpp>
 #endif
 
-#include "joint_limits_interface/joint_limits.hpp"
-#include "joint_limits_interface/joint_limits_interface.hpp"
-#include "joint_limits_interface/joint_limits_rosparam.hpp"
-#include "joint_limits_interface/joint_limits_urdf.hpp"
-
 // Gazebo
 #include "gazebo/physics/Joint.hh"
 #include "gazebo/physics/Model.hh"
@@ -142,15 +137,6 @@ protected:
   std::vector<hardware_interface::JointCommandHandle> joint_vel_cmdhandle_;
   std::vector<hardware_interface::OperationModeHandle> joint_opmodehandles_;
 
-  // limits
-  std::vector<joint_limits_interface::PositionJointSaturationHandle> joint_pos_limit_handles_;
-  std::vector<joint_limits_interface::PositionJointSoftLimitsHandle>
-  joint_pos_soft_limit_handles_;
-  std::vector<joint_limits_interface::EffortJointSaturationHandle> joint_eff_limit_handles_;
-  std::vector<joint_limits_interface::EffortJointSoftLimitsHandle>
-  joint_eff_soft_limit_handles_;
-  std::vector<joint_limits_interface::VelocityJointSaturationHandle> joint_vel_limit_handles_;
-  std::vector<joint_limits_interface::VelocityJointSoftLimitsHandle> joint_vel_soft_limit_handles_;
 
   std::string physics_type_;
 

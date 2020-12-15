@@ -8,12 +8,12 @@ find_package(controller_manager REQUIRED)
 find_package(gazebo_dev REQUIRED)
 find_package(gazebo_ros REQUIRED)
 find_package(hardware_interface REQUIRED)
-find_package(joint_limits_interface REQUIRED)
 find_package(pluginlib REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(transmission_interface REQUIRED)
 find_package(urdf REQUIRED)
 find_package(yaml_cpp_vendor REQUIRED)
+find_package(moveit_ros_planning_interface REQUIRED)
 
 # Default to C++14
 if(NOT CMAKE_CXX_STANDARD)
@@ -42,7 +42,6 @@ ament_target_dependencies(default_robot_hw_sim
   control_toolbox
   gazebo_dev
   hardware_interface
-  joint_limits_interface
   rclcpp
   transmission_interface
 )

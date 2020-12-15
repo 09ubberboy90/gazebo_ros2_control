@@ -3,7 +3,7 @@
 
 This is a ROS 2 package for integrating the `ros2_control` controller architecture with the [Gazebo](http://gazebosim.org/) simulator.
 
-This package provides a Gazebo plugin which instantiates a `ros2_control` controller manager and connects it to a Gazebo model.
+It is based of the moveit2 version of `ros_control` that is far behind the current status of the original repo.
 
 # Usage
 
@@ -17,13 +17,11 @@ It is running Gazebo and some other ROS 2 nodes.
 
 ## Running
 
-### Modifying or building your own
+Clone transmission_interface package from ros2_control and replace it inside the moveit2 structure.
 
-```bash
-cd Docker
-docker build -t gazebo_ros2_control .
-```
+Rebuild moveit2
 
+Build the package. The demo should still work without needing to install any more packages
 ### To run the demo
 
 #### Using Docker
